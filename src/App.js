@@ -1,20 +1,25 @@
 import { useObserver } from 'mobx-react';
 import { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
-import Canvas from "./components/Canvas";
-import ColorPicker from "./components/ColorPicker";
-import { useColorStore } from './store/StoreContext';
+//Mobx
+import { useStore } from './store/StoreContext';
+// Components
+import Canvas from "./components/canvas/Canvas";
+import ToolsBar from "./components/toolsBar/ToolsBar"
+//Material UI
+
+
 function App() {
-  const colorStore = useColorStore();
+
   useEffect(() => {
 
   })
   return useObserver(() =>
-    <div>
-      <h1 style={{ backgroundColor: colorStore.currentColor }}>sss</h1>
-      <ColorPicker></ColorPicker>
+    <React.Fragment>
+      <ToolsBar></ToolsBar>
       <Canvas></Canvas>
-    </div>
+    </React.Fragment>
   );
 }
 

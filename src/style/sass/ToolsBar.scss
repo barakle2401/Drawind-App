@@ -1,0 +1,23 @@
+$primaryColor: #f50057;
+$secondaryColor: white;
+$textPrimary: rgb(214, 102, 209);
+.tools-bar {
+  background-color: $primaryColor;
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  a {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 1rem;
+
+    &:hover {
+      background-color: $secondaryColor;
+      color: $primaryColor;
+    }
+  }
+}

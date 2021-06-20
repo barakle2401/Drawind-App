@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { SketchPicker } from 'react-color';
-import { useColorStore } from '../store/StoreContext';
+import { useStore } from '../../store/StoreContext';
 
 function ColorPicker() {
-    const colorStore = useColorStore();
+    const colorStore = useStore();
     const [background, setBackground] = useState(colorStore.currentColor)
 
 

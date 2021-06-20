@@ -1,14 +1,14 @@
 import React from 'react';
-import { createColorStore } from "./colorStore";
+import { createStore } from "./store";
 import { useLocalObservable } from 'mobx-react';
 
-const ColorContext = React.createContext(null);
+const StoreContext = React.createContext(null);
 
 export const ColorProvider = ({ children }) => {
 
-    const colorStore = useLocalObservable(createColorStore)
-    return <ColorContext.Provider value={colorStore}>
+    const colorStore = useLocalObservable(createStore)
+    return <StoreContext.Provider value={colorStore}>
         {children}
-    </ColorContext.Provider>
+    </StoreContext.Provider>
 }
-export const useColorStore = () => React.useContext(ColorContext)
+export const useStore = () => React.useContext(StoreContext)
